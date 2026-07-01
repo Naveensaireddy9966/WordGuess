@@ -4,7 +4,8 @@ services:
     env: node
     region: oregon
     plan: free
-    buildCommand: npm install
+    buildCommand: npm install && npm run build
     startCommand: node dist/server.cjs
+    rootDir: .
     envVars: []
     autoDeploy: true
