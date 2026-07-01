@@ -18,7 +18,19 @@
   ],
   "rewrites": [
     {
-      "source": "/(?!manifest.json|assets|service-worker.js).*",
+      "source": "/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/manifest.json",
+      "destination": "/manifest.json"
+    },
+    {
+      "source": "/service-worker.js",
+      "destination": "/service-worker.js"
+    },
+    {
+      "source": "/:path*",
       "destination": "/index.html"
     }
   ]
