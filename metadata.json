@@ -1,0 +1,6 @@
+{
+  "name": "Word Battle",
+  "description": "A real-time multiplayer turn-based word guessing game where players challenge each other with secret words.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
