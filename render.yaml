@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: wordguess-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node dist/server.cjs
+    envVars: []
+    autoDeploy: true
