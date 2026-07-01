@@ -27,7 +27,7 @@ interface Room {
 
 const app = express();
 const DEFAULT_PORT = Number(process.env.PORT) || 3000;
-const HOST = process.env.HOST || "127.0.0.1";
+const HOST = process.env.HOST || "0.0.0.0";
 const server = http.createServer(app);
 
 const io = new Server(server, {
@@ -673,7 +673,9 @@ async function main() {
   }
 
   const port = await findAvailablePort(DEFAULT_PORT, HOST);
-  console.log(`[Server] Listening on http://${HOST}:${port}`);
+  server.listen(port, HOST, () => {
+    console.log(`[Server] Listening on http://${HOST}:${port}`);
+  });
 }
 
 main().catch(err => {
